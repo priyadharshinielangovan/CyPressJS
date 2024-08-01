@@ -29,7 +29,7 @@ describe('template spec', () => {
       formpage.FirstName().type(data.Fname);
       formpage.LastName().type(data.Lname);
       formpage.Email().type(data.email);
-      formpage.GenderRadio().click();
+      formpage.GenderRadio('Female');
       formpage.Phonenumber().type(data.mobile)
       formpage.Subjects().type('New')
       formpage.HobbiesCheckbox().click();

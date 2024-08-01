@@ -22,9 +22,15 @@ class Formpage{
     return cy.get('#userEmail')
   }
 
-  GenderRadio(){
-
-    return cy.get('#genterWrapper > .col-md-9 > :nth-child(1) > .custom-control-label')
+  GenderRadio(gender:string){
+    cy.get('#genterWrapper .col-sm-12:nth-child(2) .custom-control-label').each(($el) => {
+      cy.wrap($el).invoke('text').then((text) => {
+        if (text.trim() === gender) {
+          return cy.wrap($el).click();
+        }
+      });
+    });
+    // return cy.get('#genterWrapper .col-sm-12:nth-child(2) .custom-control-label').contains(gender)
   }
 
   Phonenumber(){
