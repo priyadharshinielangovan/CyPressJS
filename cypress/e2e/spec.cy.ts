@@ -2,6 +2,7 @@
 import 'cypress-file-upload';
 import HomePage from './PageObjects/HomePage'
 import FormPage from './PageObjects/FormPage'
+import 'cypress-mochawesome-reporter/register';
 import 'cypress-file-upload';
 interface UserData {
   
@@ -35,6 +36,11 @@ describe('template spec', () => {
       formpage.Subjects().type('New')
       formpage.HobbiesCheckbox().click();
       formpage.FileUpload().attachFile('test.png')
+      formpage.Address().type('Test')
+      //formpage.StateDropdown()
+      //formpage.SelectCity()
+      //formpage.Submit()
+      expect("string1").to.equal("string1");
      })
     
     
