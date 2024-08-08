@@ -1,4 +1,8 @@
 
+import 'cypress-file-upload';
+import HomePage from './PageObjects/HomePage'
+import FormPage from './PageObjects/FormPage'
+import 'cypress-file-upload';
 interface UserData {
   
     Fname: string;
@@ -8,10 +12,7 @@ interface UserData {
   }
 
 
-  import 'cypress-file-upload';
-import HomePage from './PageObjects/HomePage'
-import FormPage from './PageObjects/FormPage'
-import 'cypress-file-upload';
+  
 describe('template spec', () => {
   const homepage=new HomePage();
   const formpage=new FormPage();
