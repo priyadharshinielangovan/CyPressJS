@@ -1,4 +1,5 @@
 import { defineConfig } from "cypress";
+declare var require: any
 
 export default defineConfig({
 
